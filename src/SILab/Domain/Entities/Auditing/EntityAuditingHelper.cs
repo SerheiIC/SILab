@@ -126,7 +126,7 @@ namespace SILab.Domain.Entities.Auditing
                 return;
             }
   
-            var lastModifierUserIdFilter = auditFields?.FirstOrDefault(e => e.FieldName == AbpAuditFields.LastModifierUserId);
+            var lastModifierUserIdFilter = auditFields?.FirstOrDefault(e => e.FieldName == AuditFields.LastModifierUserId);
             if (lastModifierUserIdFilter != null && !lastModifierUserIdFilter.IsSavingEnabled)
             {
                 return;

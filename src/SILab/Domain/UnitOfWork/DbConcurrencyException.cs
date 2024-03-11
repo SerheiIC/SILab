@@ -14,7 +14,7 @@ namespace SILab.Domain.UnitOfWork
         }
 
         /// <summary>
-        /// Creates a new <see cref="AbpException"/> object.
+        /// Creates a new <see cref="SILabException"/> object.
         /// </summary>
         public DbConcurrencyException(SerializationInfo serializationInfo, StreamingContext context)
             : base(serializationInfo, context)
@@ -23,7 +23,7 @@ namespace SILab.Domain.UnitOfWork
         }
 
         /// <summary>
-        /// Creates a new <see cref="AbpDbConcurrencyException"/> object.
+        /// Creates a new <see cref="DbConcurrencyException"/> object.
         /// </summary>
         /// <param name="message">Exception message</param>
         public DbConcurrencyException(string message)
@@ -33,7 +33,7 @@ namespace SILab.Domain.UnitOfWork
         }
 
         /// <summary>
-        /// Creates a new <see cref="AbpDbConcurrencyException"/> object.
+        /// Creates a new <see cref="DbConcurrencyException"/> object.
         /// </summary>
         /// <param name="message">Exception message</param>
         /// <param name="innerException">Inner exception</param>

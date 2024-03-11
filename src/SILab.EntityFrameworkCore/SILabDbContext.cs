@@ -183,7 +183,7 @@ namespace SILab.EntityFrameworkCore
         {
             try
             {
-                var changeReport = ApplyAbpConcepts();
+                var changeReport = ApplyMainConcepts();
                 var result = base.SaveChanges();
                 EntityChangeEventHelper.TriggerEvents(changeReport);
                 return result;
@@ -194,7 +194,7 @@ namespace SILab.EntityFrameworkCore
             }
         }
 
-        protected virtual EntityChangeReport ApplyAbpConcepts()
+        protected virtual EntityChangeReport ApplyMainConcepts()
         {
             var changeReport = new EntityChangeReport();
 
