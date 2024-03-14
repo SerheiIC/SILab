@@ -10,9 +10,7 @@ namespace SILab.Domain.Repositories
     /// <typeparam name="TEntity">Main Entity type this repository works on</typeparam>
     /// <typeparam name="TPrimaryKey">Primary key type of the entity</typeparam>
     public interface IRepository<TEntity, TPrimaryKey> : IRepository where TEntity : class, IEntity<TPrimaryKey>
-    {
-
-
+    { 
         /// <summary>
         /// Used to get a IQueryable that is used to retrieve entities from entire table.
         /// </summary>
@@ -318,6 +316,13 @@ namespace SILab.Domain.Repositories
 
     }
 
+    /// <summary>
+    /// A shortcut of <see cref="IRepository{TEntity,TPrimaryKey}"/> for most used primary key type (<see cref="int"/>).
+    /// </summary>
+    /// <typeparam name="TEntity">Entity type</typeparam>
+    public interface IRepository<TEntity> : IRepository<TEntity, int> where TEntity : class, IEntity<int>
+    {
+    }
 
     /// <summary>
     /// This interface must be implemented by all repositories to identify them by convention.
@@ -325,8 +330,5 @@ namespace SILab.Domain.Repositories
     /// </summary>
     public interface IRepository : ITransientDependency
     {
-
     }
-   
-
 }

@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace SILab.EntityFrameworkCore.Tests.Ef
 {
-    public class AdventureWorksDbContext : SILabDbContext
+    public class AdventureWorksLiteDbContext : SILabDbContext
     { 
         public DbSet<Address> Addresses { get; set; }
 
         public DbSet<Customer> Customers { get; set; }
 
-        public AdventureWorksDbContext(DbContextOptions options) : base(options)
+        public AdventureWorksLiteDbContext(DbContextOptions options) : base(options)
         {
         }
     }
